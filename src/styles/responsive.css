@@ -1,0 +1,464 @@
+/* ── EXTRA SMALL DEVICES (max 320px) ── */
+@media (max-width: 320px) {
+  body {
+    font-size: 16px;
+    direction: rtl;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-badge {
+    font-size: 0.6rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .navbar-container {
+    height: 50px;
+  }
+
+  .logo {
+    font-size: 0.9rem;
+  }
+}
+
+/* ── SMALL DEVICES (321px - 480px) ── */
+@media (min-width: 321px) and (max-width: 480px) {
+  body {
+    font-size: 16px;
+    direction: rtl;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Hero section */
+  .hero {
+    margin-top: 50px;
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Specs grid */
+  .specs-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .spec-card {
+    padding: 1.5rem;
+  }
+
+  /* Features grid */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  /* Stats grid */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    aspect-ratio: auto;
+  }
+
+  .gallery-item {
+    aspect-ratio: 4/3;
+  }
+
+  /* Accessories */
+  .accessories-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .accessory-card {
+    padding: 1rem;
+  }
+
+  /* Buttons */
+  .cta-button-group {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  /* Section spacing */
+  .specs-section,
+  .features-section,
+  .gallery-section,
+  .accessories-section,
+  .cta-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  /* Tables responsive */
+  .specs-table {
+    font-size: 0.8rem;
+  }
+
+  .specs-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  /* Navigation */
+  .navbar-container {
+    height: 50px;
+    padding: 0.75rem;
+  }
+
+  .logo {
+    font-size: 0.9rem;
+  }
+
+  .logo-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .nav-links {
+    top: 50px;
+  }
+
+  /* Hero animations background */
+  .hero::before {
+    width: 250px;
+    height: 250px;
+    top: -40%;
+    right: -30%;
+  }
+
+  .hero::after {
+    width: 200px;
+    height: 200px;
+  }
+
+
+}
+
+/* ── MEDIUM DEVICES (481px - 768px) ── */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero {
+    padding: 2.5rem 1.5rem;
+    gap: 2rem;
+    margin-top: 60px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .accessories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .accessory-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+
+  /* Section spacing */
+  .specs-section,
+  .features-section,
+  .gallery-section,
+  .accessories-section,
+  .cta-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .cta-button-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    padding: 0.9rem 1.8rem;
+  }
+
+  /* Navigation */
+  .navbar-container {
+    padding: 0.85rem 1.5rem;
+    height: 65px;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* ── LARGE DEVICES (769px - 1024px) ── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 2rem;
+    gap: 2rem;
+  }
+
+  .specs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .accessories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  /* Section spacing */
+  .specs-section,
+  .features-section,
+  .gallery-section,
+  .accessories-section,
+  .cta-section {
+    padding: 3.5rem 2rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* ── EXTRA LARGE DEVICES (1025px+) ── */
+@media (min-width: 1025px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    max-width: none;
+  }
+
+  .specs-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .accessories-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  /* Hide mobile menu */
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+  }
+}
+
+/* ── PRINT STYLES ── */
+@media print {
+  body::before {
+    display: none;
+  }
+
+  .navbar-container,
+  .cta-section,
+  .cta-button-group,
+  .menu-toggle {
+    display: none;
+  }
+
+  .hero,
+  .specs-section,
+  .features-section,
+  .gallery-section,
+  .accessories-section {
+    page-break-inside: avoid;
+  }
+
+  * {
+    color: #000;
+    background: #fff;
+  }
+}
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── DARK MODE (ALREADY IN DEEP DARK) ── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-deep: #080C0F;
+    --bg-surface: #0D1318;
+    --bg-raised: #111820;
+    --bg-card: #141C24;
+  }
+}
+
+/* ── HIGH CONTRAST ── */
+@media (prefers-contrast: more) {
+  :root {
+    --cyan: #00D4FF;
+    --accent-warm: #FF5C1A;
+  }
+
+  .cta-primary {
+    box-shadow: 0 0 10px var(--cyan);
+  }
+
+  .spec-card,
+  .feature-card,
+  .accessory-card {
+    border-width: 2px;
+  }
+}
+
+/* ── LANDSCAPE ORIENTATION ── */
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: 2rem;
+  }
+
+  .navbar-container {
+    height: 50px;
+  }
+
+  .nav-links {
+    top: 50px;
+  }
+}
+
+/* ── TOUCH DEVICE OPTIMIZATION ── */
+@media (hover: none) and (pointer: coarse) {
+  .cta-primary,
+  .cta-secondary,
+  .nav-link,
+  .spec-card,
+  .feature-card,
+  .accessory-card {
+    padding: 1rem;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem;
+  }
+}

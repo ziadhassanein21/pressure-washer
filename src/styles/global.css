@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap');
+
+@font-face {
+  font-family: 'Arshid';
+  src: url('./fonts/Arshid.woff') format('woff'),
+       url('./fonts/Arshid.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --bg-deep:      #080C0F;
+  --bg-surface:   #0D1318;
+  --bg-raised:    #111820;
+  --bg-card:      #141C24;
+  --border:       rgba(0, 180, 255, 0.12);
+  --border-hi:    rgba(0, 180, 255, 0.35);
+  --cyan:         #00B4FF;
+  --cyan-dim:     rgba(0, 180, 255, 0.15);
+  --cyan-glow:    rgba(0, 180, 255, 0.4);
+  --steel:        #A8BFD0;
+  --text-hi:      #F0F6FF;
+  --text-mid:     #A8BFD0;
+  --text-lo:      #7B97AE;
+  --accent-warm:  #FF6B2B;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Barlow', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  direction: rtl;
+  lang: ar;
+}
+
+body {
+  background: var(--bg-deep);
+  color: var(--text-hi);
+  font-family: var(--font-body);
+  direction: rtl;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: right;
+}
+
+/* ── NOISE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cyan);
+  border-radius: 2px;
+}
+
+/* ── SCROLLBAR FIREFOX ── */
+* {
+  scrollbar-color: var(--cyan) var(--bg-deep);
+  scrollbar-width: thin;
+}

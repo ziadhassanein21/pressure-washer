@@ -1,0 +1,149 @@
+/* Fast fade entrance from below */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Directional fade entrance for RTL support */
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Shimmer effect for loading-like states */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Pulse ring effect for CTAs */
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Float effect for floating elements */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Border glow effect */
+@keyframes borderGlow {
+  0%,
+  100% {
+    border-color: var(--border);
+    box-shadow: 0 0 0 rgba(0, 180, 255, 0.4);
+  }
+  50% {
+    border-color: var(--cyan);
+    box-shadow: 0 0 15px rgba(0, 180, 255, 0.3);
+  }
+}
+
+/* Drop in effect */
+@keyframes dropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle scale pulse */
+@keyframes scalePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+/* Rotate effect */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Slide in from side */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Used for staggered item animations */
+.staggered-item {
+  animation: fadeUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.staggered-item:nth-child(1) { animation-delay: 0s; }
+.staggered-item:nth-child(2) { animation-delay: 0.1s; }
+.staggered-item:nth-child(3) { animation-delay: 0.2s; }
+.staggered-item:nth-child(4) { animation-delay: 0.3s; }
+.staggered-item:nth-child(5) { animation-delay: 0.4s; }
+.staggered-item:nth-child(6) { animation-delay: 0.5s; }
+.staggered-item:nth-child(7) { animation-delay: 0.6s; }
+.staggered-item:nth-child(8) { animation-delay: 0.7s; }
+.staggered-item:nth-child(9) { animation-delay: 0.8s; }
+.staggered-item:nth-child(10) { animation-delay: 0.9s; }
