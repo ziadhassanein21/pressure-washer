@@ -12,7 +12,7 @@ const PRODUCT_IMG2 = "https://cdn.salla.sa/PdbNje/95ecf8fe-55c9-488d-bcc0-92ee7a
 const PRODUCT_IMG3 = "https://cdn.salla.sa/PdbNje/d2f809ac-68a2-4280-9d6c-5f4590a4ecc1-750x1000-Q4FFyJZdEIlYzOdDa67s5uWjElTUxUuzk4ePSwqH.jpg";
 
 // Images for slider
-const DIRTY_IMG = "/before-car.png"; 
+const DIRTY_IMG = "/before-car.png";
 const CLEAN_IMG = "/after-car.png";
 
 const CURRENT_PRICE = 400;
@@ -43,10 +43,10 @@ function useScrollReveal() {
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   // Slider State
   const [sliderPos, setSliderPos] = useState(50);
-  
+
   // Timer State (Random between 1 hour and 2 hours)
   const [timeLeft, setTimeLeft] = useState(() => Math.floor(Math.random() * 3600) + 3600);
 
@@ -131,7 +131,7 @@ export default function App() {
       <nav className={`navbar-container${scrolled ? " scrolled" : ""}`} role="navigation">
         <div className="logo" aria-label=" ADAPTER store logo">عدتنا<span>.</span></div>
 
-        <button 
+        <button
           className={`menu-toggle ${mobileMenuOpen ? 'active' : ''}`}
           aria-label="Toggle Navigation"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -152,14 +152,14 @@ export default function App() {
       {/* HERO SECTION */}
       <section className="hero" id="hero" aria-label="Hero section">
         <div className="hero-content">
-          
+
           {/* Discount & Countdown */}
           <div className="hero-badge-group">
             <div className="hero-badge">
               <span style={{ color: "#FF6B2B", fontSize: "9px" }}>●</span> خصم 5% — عرض محدود
             </div>
             <div className="countdown-timer">
-              ⏳ ينتهي العرض خلال: <span style={{marginLeft: "6px"}}>{formatTime(timeLeft)}</span>
+              ⏳ ينتهي العرض خلال: <span style={{ marginLeft: "6px" }}>{formatTime(timeLeft)}</span>
             </div>
           </div>
 
@@ -183,7 +183,7 @@ export default function App() {
           </p>
 
           {/* Price Section */}
-          <div className="hero-price-section" style={{marginTop: "2rem"}}>
+          <div className="hero-price-section" style={{ marginTop: "2rem" }}>
             <div className="hero-price">
               <div className="price-label">السعر</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
@@ -196,20 +196,20 @@ export default function App() {
                   <span>{formattedOriginalPrice}</span>
                 </span>
                 {/* Tabby Badge */}
-                <div className="tabby-badge" style={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  gap: '8px', 
-                  background: '#3DF1D1', 
-                  color: '#000', 
-                  padding: '4px 12px', 
-                  borderRadius: '6px', 
-                  fontSize: '13px', 
-                  fontWeight: 'bold' 
+                <div className="tabby-badge" style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  background: '#3DF1D1',
+                  color: '#000',
+                  padding: '4px 12px',
+                  borderRadius: '6px',
+                  fontSize: '13px',
+                  fontWeight: 'bold'
                 }}>
-                  <span style={{ fontSize: '16px' }}>💳</span> + متوفر تابي تقسيط
+                  <span style={{ fontSize: '16px' }}></span> متوفر تابي تقسيط 💳
                 </div>
-                
+
                 {/* Risk Reversal Badge */}
                 <div className="warranty-badge" style={{ background: 'rgba(255, 107, 43, 0.1)', color: '#FF6B2B', border: '1px solid rgba(255, 107, 43, 0.2)' }}>
                   ملاحظة مهمة ضمان تشغيل فقط .🚨
@@ -229,21 +229,21 @@ export default function App() {
           {/* Low Stock Indicator */}
           <div className="stock-indicator">
             <div className="stock-text">🔥 سارع بالطلب! متبقي 3 قطع فقط</div>
-            <div className="stock-bar"><div className="stock-fill" style={{width: '15%'}}></div></div>
+            <div className="stock-bar"><div className="stock-fill" style={{ width: '15%' }}></div></div>
           </div>
 
           {/* Trust Badges */}
-          <div className="trust-badges-container" style={{marginTop: "2rem"}}>
+          <div className="trust-badges-container" style={{ marginTop: "2rem" }}>
             <span className="trust-badge-label">دفع آمن وموثوق</span>
-            <div className="trust-badges" style={{display: 'flex', gap: '10px', alignItems: 'center'}}>
-              <div 
-                title="مدى" 
-                style={{background: 'linear-gradient(135deg, #00A859 0%, #8CC63F 100%)', color: 'white', fontWeight: 900, fontStyle: 'italic', padding: '0 8px', borderRadius: '4px', height: '26px', display: 'flex', alignItems: 'center', letterSpacing: '0.5px', fontSize: '13px', fontFamily: 'sans-serif' }}>
+            <div className="trust-badges" style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+              <div
+                title="مدى"
+                style={{ background: 'linear-gradient(135deg, #00A859 0%, #8CC63F 100%)', color: 'white', fontWeight: 900, fontStyle: 'italic', padding: '0 8px', borderRadius: '4px', height: '26px', display: 'flex', alignItems: 'center', letterSpacing: '0.5px', fontSize: '13px', fontFamily: 'sans-serif' }}>
                 mada
               </div>
-              <img src="https://api.iconify.design/logos:apple-pay.svg" alt="Apple Pay" title="أبل باي" style={{height: "28px", filter: "invert(0.7)"}} />
-              <img src="https://api.iconify.design/logos:visa.svg" alt="Visa" title="فيزا" style={{height: "18px"}} />
-              <img src="https://api.iconify.design/logos:mastercard.svg" alt="MasterCard" title="ماستركارد" style={{height: "22px"}} />
+              <img src="https://api.iconify.design/logos:apple-pay.svg" alt="Apple Pay" title="أبل باي" style={{ height: "28px", filter: "invert(0.7)" }} />
+              <img src="https://api.iconify.design/logos:visa.svg" alt="Visa" title="فيزا" style={{ height: "18px" }} />
+              <img src="https://api.iconify.design/logos:mastercard.svg" alt="MasterCard" title="ماستركارد" style={{ height: "22px" }} />
             </div>
           </div>
         </div>
@@ -258,27 +258,27 @@ export default function App() {
 
       {/* INTERACTIVE SLIDER SECTION */}
       <section className="interactive-section reveal" id="interactive" aria-label="Before and after slider">
-         <div className="section-header">
+        <div className="section-header">
           <h2 className="section-title">شاهد قوة التنظيف</h2>
           <p className="section-subtitle">إزالة الأوساخ المستعصية بفضل الضغط العالي 90 بار.</p>
         </div>
         <div className="slider-wrapper" dir="ltr">
-           <div className="slider-container">
-             <img src={DIRTY_IMG} alt="Dirty Surface" className="slider-image-dirty" />
-             <div className="slider-image-clean" style={{ clipPath: `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)` }}>
-               <img src={CLEAN_IMG} alt="Clean Surface" />
-             </div>
-             <input 
-               type="range" min="0" max="100" value={sliderPos} 
-               onChange={(e) => setSliderPos(e.target.value)} 
-               className="slider-input" aria-label="Before and after comparison slider"
-             />
-             <div className="slider-line" style={{ left: `${sliderPos}%` }}>
-               <div className="slider-button">↔</div>
-             </div>
-             <div className="slider-label label-before">بعد</div>
-             <div className="slider-label label-after">قبل</div>
-           </div>
+          <div className="slider-container">
+            <img src={DIRTY_IMG} alt="Dirty Surface" className="slider-image-dirty" />
+            <div className="slider-image-clean" style={{ clipPath: `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)` }}>
+              <img src={CLEAN_IMG} alt="Clean Surface" />
+            </div>
+            <input
+              type="range" min="0" max="100" value={sliderPos}
+              onChange={(e) => setSliderPos(e.target.value)}
+              className="slider-input" aria-label="Before and after comparison slider"
+            />
+            <div className="slider-line" style={{ left: `${sliderPos}%` }}>
+              <div className="slider-button">↔</div>
+            </div>
+            <div className="slider-label label-before">بعد</div>
+            <div className="slider-label label-after">قبل</div>
+          </div>
         </div>
       </section>
 
