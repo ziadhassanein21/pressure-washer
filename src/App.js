@@ -195,9 +195,25 @@ export default function App() {
                   <span className="price-symbol">$</span>
                   <span>{formattedOriginalPrice}</span>
                 </span>
+                {/* Tabby Badge */}
+                <div className="tabby-badge" style={{ 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: '8px', 
+                  background: '#3DF1D1', 
+                  color: '#000', 
+                  padding: '4px 12px', 
+                  borderRadius: '6px', 
+                  fontSize: '13px', 
+                  fontWeight: 'bold' 
+                }}>
+                  <span style={{ fontSize: '16px' }}>💳</span> + متوفر تابي تقسيط
+                </div>
                 
                 {/* Risk Reversal Badge */}
-                <div className="warranty-badge">🛡️ ضمان سنتين</div>
+                <div className="warranty-badge" style={{ background: 'rgba(255, 107, 43, 0.1)', color: '#FF6B2B', border: '1px solid rgba(255, 107, 43, 0.2)' }}>
+                  ملاحظة مهمة ضمان تشغيل فقط .🚨
+                </div>
               </div>
             </div>
           </div>
